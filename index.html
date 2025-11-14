@@ -111,6 +111,36 @@
             animation-delay: 2.2s;
         }
 
+        .sparkle11 {
+            top: 50%;
+            left: 30%;
+            animation-delay: 0.7s;
+        }
+
+        .sparkle12 {
+            bottom: 40%;
+            right: 25%;
+            animation-delay: 1.3s;
+        }
+
+        .sparkle13 {
+            top: 80%;
+            left: 20%;
+            animation-delay: 2.7s;
+        }
+
+        .sparkle14 {
+            top: 40%;
+            right: 50%;
+            animation-delay: 1.9s;
+        }
+
+        .sparkle15 {
+            bottom: 15%;
+            left: 50%;
+            animation-delay: 0.4s;
+        }
+
         @keyframes sparkle {
             0%, 100% {
                 opacity: 0;
@@ -128,6 +158,87 @@
                 opacity: 0.8;
                 transform: scale(1.2) translateY(-15px) rotate(270deg);
             }
+        }
+
+        /* Plantas animadas */
+        .plant {
+            position: absolute;
+            width: 80px;
+            height: 120px;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .plant1 {
+            bottom: -20px;
+            left: 5%;
+            animation: sway 8s infinite ease-in-out;
+            animation-delay: 0s;
+        }
+
+        .plant2 {
+            bottom: -20px;
+            right: 8%;
+            animation: sway 10s infinite ease-in-out;
+            animation-delay: 2s;
+        }
+
+        .plant3 {
+            bottom: -20px;
+            left: 35%;
+            animation: sway 9s infinite ease-in-out;
+            animation-delay: 1s;
+        }
+
+        .plant4 {
+            bottom: -20px;
+            right: 30%;
+            animation: sway 11s infinite ease-in-out;
+            animation-delay: 3s;
+        }
+
+        .plant5 {
+            bottom: -20px;
+            left: 60%;
+            animation: sway 7s infinite ease-in-out;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes sway {
+            0%, 100% {
+                transform: translateX(0) rotate(0deg);
+            }
+            25% {
+                transform: translateX(10px) rotate(2deg);
+            }
+            50% {
+                transform: translateX(0) rotate(0deg);
+            }
+            75% {
+                transform: translateX(-10px) rotate(-2deg);
+            }
+        }
+
+        .plant::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #2e7d32 0%, #4caf50 50%, #66bb6a 100%);
+            clip-path: polygon(50% 0%, 0% 100%, 20% 100%, 50% 30%, 80% 100%, 100% 100%);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        }
+
+        .plant::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 40px;
+            background: #558b2f;
+            border-radius: 4px;
         }
 
         .shape1 {
@@ -768,6 +879,16 @@
         <div class="golden-sparkle sparkle8"></div>
         <div class="golden-sparkle sparkle9"></div>
         <div class="golden-sparkle sparkle10"></div>
+        <div class="golden-sparkle sparkle11"></div>
+        <div class="golden-sparkle sparkle12"></div>
+        <div class="golden-sparkle sparkle13"></div>
+        <div class="golden-sparkle sparkle14"></div>
+        <div class="golden-sparkle sparkle15"></div>
+        <div class="plant plant1"></div>
+        <div class="plant plant2"></div>
+        <div class="plant plant3"></div>
+        <div class="plant plant4"></div>
+        <div class="plant plant5"></div>
     </div>
 
     <div class="container">
@@ -789,85 +910,91 @@
         </section>
 
         <section class="menu-section fade-in">
-            <h2 class="section-title">Nuestro Menú</h2>
+            <h2 class="section-title">Platos Dulces</h2>
             <div class="menu-grid">
-                <div class="menu-item" data-title="Dulce Aurora" data-description="Gaufre belga artesanal con textura dorada y crujiente, servido con miel de flores silvestres y mantequilla derretida. Un clásico que nunca pasa de moda, perfecto para comenzar el día con dulzura." data-price="$8.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610496/Gemini_Generated_Image_jj2f77jj2f77jj2f_cbmuhp.png">
-                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610496/Gemini_Generated_Image_jj2f77jj2f77jj2f_cbmuhp.png" alt="Dulce Aurora">
+                <div class="menu-item" data-title="Aurora Matutina" data-description="Dulce" data-price="$8.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610496/Gemini_Generated_Image_jj2f77jj2f77jj2f_cbmuhp.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610496/Gemini_Generated_Image_jj2f77jj2f77jj2f_cbmuhp.png" alt="Aurora Matutina">
                     <div class="menu-item-content">
-                        <div class="menu-item-title">Dulce Aurora</div>
-                        <div class="menu-item-description">Gaufre clásico con miel y mantequilla</div>
+                        <div class="menu-item-title">Aurora Matutina</div>
+                        <div class="menu-item-description">Dulce</div>
                         <div class="menu-item-price">$8.50</div>
                     </div>
                 </div>
-                <div class="menu-item" data-title="Jardín de Frutas" data-description="Gaufre cubierto con una selección colorida de frutas frescas de temporada, coronado con crema batida casera y un toque de azúcar glas. Una explosión de frescura y colores naturales en cada bocado." data-price="$10.00" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610502/Gemini_Generated_Image_le8763le8763le87_rujp6n.png">
-                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610502/Gemini_Generated_Image_le8763le8763le87_rujp6n.png" alt="Jardín de Frutas">
+                <div class="menu-item" data-title="Jardín Encantado" data-description="Dulce" data-price="$10.00" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610502/Gemini_Generated_Image_le8763le8763le87_rujp6n.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610502/Gemini_Generated_Image_le8763le8763le87_rujp6n.png" alt="Jardín Encantado">
                     <div class="menu-item-content">
-                        <div class="menu-item-title">Jardín de Frutas</div>
-                        <div class="menu-item-description">Frutas frescas con crema batida</div>
+                        <div class="menu-item-title">Jardín Encantado</div>
+                        <div class="menu-item-description">Dulce</div>
                         <div class="menu-item-price">$10.00</div>
                     </div>
                 </div>
-                <div class="menu-item" data-title="Noche de Chocolate" data-description="Gaufre bañado en salsa de chocolate belga derretido, decorado con nueces tostadas y trozos de chocolate premium. Una experiencia indulgente para los amantes del cacao más puro y delicioso." data-price="$11.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610543/Gemini_Generated_Image_qxda8mqxda8mqxda_xpjrvi.png">
-                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610543/Gemini_Generated_Image_qxda8mqxda8mqxda_xpjrvi.png" alt="Noche de Chocolate">
+                <div class="menu-item" data-title="Noche Estrellada" data-description="Dulce" data-price="$11.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610543/Gemini_Generated_Image_qxda8mqxda8mqxda_xpjrvi.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610543/Gemini_Generated_Image_qxda8mqxda8mqxda_xpjrvi.png" alt="Noche Estrellada">
                     <div class="menu-item-content">
-                        <div class="menu-item-title">Noche de Chocolate</div>
-                        <div class="menu-item-description">Chocolate belga con nueces tostadas</div>
+                        <div class="menu-item-title">Noche Estrellada</div>
+                        <div class="menu-item-description">Dulce</div>
                         <div class="menu-item-price">$11.50</div>
                     </div>
                 </div>
-                <div class="menu-item" data-title="Caramelo Dorado" data-description="Gaufre artesanal con salsa de caramelo casero, un toque de sal marina y helado de vainilla. La perfecta combinación de dulce y salado que crea una armonía de sabores inolvidable." data-price="$12.00" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610529/Gemini_Generated_Image_9k1h329k1h329k1h_ql7z3p.png">
-                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610529/Gemini_Generated_Image_9k1h329k1h329k1h_ql7z3p.png" alt="Caramelo Dorado">
+                <div class="menu-item" data-title="Caramelo Brillante" data-description="Dulce" data-price="$12.00" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610529/Gemini_Generated_Image_9k1h329k1h329k1h_ql7z3p.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610529/Gemini_Generated_Image_9k1h329k1h329k1h_ql7z3p.png" alt="Caramelo Brillante">
                     <div class="menu-item-content">
-                        <div class="menu-item-title">Caramelo Dorado</div>
-                        <div class="menu-item-description">Caramelo casero con helado de vainilla</div>
+                        <div class="menu-item-title">Caramelo Brillante</div>
+                        <div class="menu-item-description">Dulce</div>
                         <div class="menu-item-price">$12.00</div>
                     </div>
                 </div>
-                <div class="menu-item" data-title="Tropical Paradise" data-description="Gaufre crujiente con crema de avellanas, rodajas de plátano fresco y un toque de canela. Un sabor tropical que transporta tus sentidos a un paraíso de dulzura y texturas perfectas." data-price="$10.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610515/Gemini_Generated_Image_l0fe0rl0fe0rl0fe_v04ydh.png">
-                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610515/Gemini_Generated_Image_l0fe0rl0fe0rl0fe_v04ydh.png" alt="Tropical Paradise">
+                <div class="menu-item" data-title="Paraíso Tropical" data-description="Dulce" data-price="$10.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610515/Gemini_Generated_Image_l0fe0rl0fe0rl0fe_v04ydh.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610515/Gemini_Generated_Image_l0fe0rl0fe0rl0fe_v04ydh.png" alt="Paraíso Tropical">
                     <div class="menu-item-content">
-                        <div class="menu-item-title">Tropical Paradise</div>
-                        <div class="menu-item-description">Crema de avellanas con plátano</div>
+                        <div class="menu-item-title">Paraíso Tropical</div>
+                        <div class="menu-item-description">Dulce</div>
                         <div class="menu-item-price">$10.50</div>
                     </div>
                 </div>
-                <div class="menu-item" data-title="Terciopelo Escarlata" data-description="Gaufre de terciopelo rojo con glaseado de queso crema suave y frambuesas frescas. Una creación elegante que combina la suavidad del terciopelo con la frescura de las frutas rojas." data-price="$13.00" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610552/Gemini_Generated_Image_thfskythfskythfs_s0di0s.png">
-                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610552/Gemini_Generated_Image_thfskythfskythfs_s0di0s.png" alt="Terciopelo Escarlata">
+            </div>
+        </section>
+
+        <section class="menu-section fade-in">
+            <h2 class="section-title">Platos Salados</h2>
+            <div class="menu-grid">
+                <div class="menu-item" data-title="Terciopelo Real" data-description="Salado" data-price="$13.00" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610552/Gemini_Generated_Image_thfskythfskythfs_s0di0s.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610552/Gemini_Generated_Image_thfskythfskythfs_s0di0s.png" alt="Terciopelo Real">
                     <div class="menu-item-content">
-                        <div class="menu-item-title">Terciopelo Escarlata</div>
-                        <div class="menu-item-description">Red velvet con glaseado de queso</div>
+                        <div class="menu-item-title">Terciopelo Real</div>
+                        <div class="menu-item-description">Salado</div>
                         <div class="menu-item-price">$13.00</div>
                     </div>
                 </div>
-                <div class="menu-item" data-title="Brisa Oriental" data-description="Gaufre con polvo de té matcha, cubierto con mango fresco, semillas de sésamo y un toque de miel. Una fusión de sabores orientales que crea una experiencia única y refrescante." data-price="$12.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610563/Gemini_Generated_Image_lnctbqlnctbqlnct_uckjtk.png">
-                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610563/Gemini_Generated_Image_lnctbqlnctbqlnct_uckjtk.png" alt="Brisa Oriental">
+                <div class="menu-item" data-title="Brisa Marina" data-description="Salado" data-price="$12.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610563/Gemini_Generated_Image_lnctbqlnctbqlnct_uckjtk.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610563/Gemini_Generated_Image_lnctbqlnctbqlnct_uckjtk.png" alt="Brisa Marina">
                     <div class="menu-item-content">
-                        <div class="menu-item-title">Brisa Oriental</div>
-                        <div class="menu-item-description">Matcha con mango y sésamo</div>
+                        <div class="menu-item-title">Brisa Marina</div>
+                        <div class="menu-item-description">Salado</div>
                         <div class="menu-item-price">$12.50</div>
                     </div>
                 </div>
-                <div class="menu-item" data-title="Sueño Italiano" data-description="Gaufre con café espresso, mascarpone cremoso, cacao en polvo y galletas. El clásico tiramisú reinventado en formato belga, una delicia que combina lo mejor de dos mundos." data-price="$13.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610581/Gemini_Generated_Image_azioxjazioxjazio_ff91lt.png">
-                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610581/Gemini_Generated_Image_azioxjazioxjazio_ff91lt.png" alt="Sueño Italiano">
+                <div class="menu-item" data-title="Sueño Mediterráneo" data-description="Salado" data-price="$13.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610581/Gemini_Generated_Image_azioxjazioxjazio_ff91lt.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610581/Gemini_Generated_Image_azioxjazioxjazio_ff91lt.png" alt="Sueño Mediterráneo">
                     <div class="menu-item-content">
-                        <div class="menu-item-title">Sueño Italiano</div>
-                        <div class="menu-item-description">Tiramisú en formato gaufre</div>
+                        <div class="menu-item-title">Sueño Mediterráneo</div>
+                        <div class="menu-item-description">Salado</div>
                         <div class="menu-item-price">$13.50</div>
                     </div>
                 </div>
-                <div class="menu-item" data-title="Galleta Cremosa" data-description="Gaufre con helado de cookies & cream, trozos de galleta Oreo, crema batida esponjosa y salsa de chocolate. Una indulgencia perfecta para los amantes de las texturas cremosas y crujientes." data-price="$11.00" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610612/Gemini_Generated_Image_v382bkv382bkv382_b1uuuq.png">
-                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610612/Gemini_Generated_Image_v382bkv382bkv382_b1uuuq.png" alt="Galleta Cremosa">
+                <div class="menu-item" data-title="Cremoso Deluxe" data-description="Salado" data-price="$11.00" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610612/Gemini_Generated_Image_v382bkv382bkv382_b1uuuq.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610612/Gemini_Generated_Image_v382bkv382bkv382_b1uuuq.png" alt="Cremoso Deluxe">
                     <div class="menu-item-content">
-                        <div class="menu-item-title">Galleta Cremosa</div>
-                        <div class="menu-item-description">Helado y galletas con crema</div>
+                        <div class="menu-item-title">Cremoso Deluxe</div>
+                        <div class="menu-item-description">Salado</div>
                         <div class="menu-item-price">$11.00</div>
                     </div>
                 </div>
-                <div class="menu-item" data-title="Oro del Chef" data-description="La creación estrella del chef. Gaufre con ingredientes premium seleccionados, presentado con elegancia y un toque especial. Una experiencia gastronómica única que despierta todos los sentidos." data-price="$15.00" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610707/Gemini_Generated_Image_jj2f77jj2f77jj2f_fzvjot.png">
-                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610707/Gemini_Generated_Image_jj2f77jj2f77jj2f_fzvjot.png" alt="Oro del Chef">
+                <div class="menu-item" data-title="Oro Real" data-description="Salado" data-price="$15.00" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610707/Gemini_Generated_Image_jj2f77jj2f77jj2f_fzvjot.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610707/Gemini_Generated_Image_jj2f77jj2f77jj2f_fzvjot.png" alt="Oro Real">
                     <div class="menu-item-content">
-                        <div class="menu-item-title">Oro del Chef</div>
-                        <div class="menu-item-description">Creación premium exclusiva</div>
+                        <div class="menu-item-title">Oro Real</div>
+                        <div class="menu-item-description">Salado</div>
                         <div class="menu-item-price">$15.00</div>
                     </div>
                 </div>
@@ -877,28 +1004,28 @@
         <section class="bebidas-section fade-in">
             <h2 class="section-title">Bebidas</h2>
             <div class="bebidas-grid">
-                <div class="bebida-item" data-title="Aroma Dorado" data-description="Café de origen único, tostado artesanalmente y preparado con dedicación. Presenta notas de chocolate y caramelo, con un cuerpo suave y aroma intenso que complementa perfectamente cualquier gaufre de nuestro menú." data-price="$4.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762611806/Gemini_Generated_Image_c0xzifc0xzifc0xz_c95rib.png">
-                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762611806/Gemini_Generated_Image_c0xzifc0xzifc0xz_c95rib.png" alt="Aroma Dorado">
+                <div class="bebida-item" data-title="Brisa de Arándanos" data-description="Bebida refrescante de arándanos" data-price="$5.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762611806/Gemini_Generated_Image_c0xzifc0xzifc0xz_c95rib.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762611806/Gemini_Generated_Image_c0xzifc0xzifc0xz_c95rib.png" alt="Brisa de Arándanos">
                     <div class="bebida-item-content">
-                        <div class="bebida-item-title">Aroma Dorado</div>
-                        <div class="bebida-item-description">Café artesanal con notas de chocolate</div>
-                        <div class="bebida-item-price">$4.50</div>
-                    </div>
-                </div>
-                <div class="bebida-item" data-title="Frescor Natural" data-description="Batido refrescante preparado con frutas frescas de temporada, yogur natural cremoso y un toque de miel. Una bebida rica en vitaminas con un sabor delicioso y natural, disponible en diferentes combinaciones según la temporada." data-price="$5.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762611800/Gemini_Generated_Image_mz9xsjmz9xsjmz9x_xozr8e.png">
-                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762611800/Gemini_Generated_Image_mz9xsjmz9xsjmz9x_xozr8e.png" alt="Frescor Natural">
-                    <div class="bebida-item-content">
-                        <div class="bebida-item-title">Frescor Natural</div>
-                        <div class="bebida-item-description">Batido de frutas con yogur natural</div>
+                        <div class="bebida-item-title">Brisa de Arándanos</div>
+                        <div class="bebida-item-description">Bebida refrescante de arándanos</div>
                         <div class="bebida-item-price">$5.50</div>
                     </div>
                 </div>
-                <div class="bebida-item" data-title="Serenidad Infusionada" data-description="Selección cuidadosa de tés e infusiones de alta calidad: té verde, té negro, rooibos, manzanilla y más variedades. Cada uno seleccionado para ofrecer una experiencia única de sabor, aroma y bienestar." data-price="$4.00" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762611914/Gemini_Generated_Image_a8fjxea8fjxea8fj_h9xr3g.png">
-                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762611914/Gemini_Generated_Image_a8fjxea8fjxea8fj_h9xr3g.png" alt="Serenidad Infusionada">
+                <div class="bebida-item" data-title="Esencia de Frutos Rojos" data-description="Bebida de frutos rojos" data-price="$5.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762611800/Gemini_Generated_Image_mz9xsjmz9xsjmz9x_xozr8e.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762611800/Gemini_Generated_Image_mz9xsjmz9xsjmz9x_xozr8e.png" alt="Esencia de Frutos Rojos">
                     <div class="bebida-item-content">
-                        <div class="bebida-item-title">Serenidad Infusionada</div>
-                        <div class="bebida-item-description">Tés e infusiones premium</div>
-                        <div class="bebida-item-price">$4.00</div>
+                        <div class="bebida-item-title">Esencia de Frutos Rojos</div>
+                        <div class="bebida-item-description">Bebida de frutos rojos</div>
+                        <div class="bebida-item-price">$5.50</div>
+                    </div>
+                </div>
+                <div class="bebida-item" data-title="Pasión de Maracuyá" data-description="Bebida tropical de maracuyá" data-price="$5.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762611914/Gemini_Generated_Image_a8fjxea8fjxea8fj_h9xr3g.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762611914/Gemini_Generated_Image_a8fjxea8fjxea8fj_h9xr3g.png" alt="Pasión de Maracuyá">
+                    <div class="bebida-item-content">
+                        <div class="bebida-item-title">Pasión de Maracuyá</div>
+                        <div class="bebida-item-description">Bebida tropical de maracuyá</div>
+                        <div class="bebida-item-price">$5.50</div>
                     </div>
                 </div>
             </div>
