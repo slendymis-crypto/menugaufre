@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaufre Douceur - Menú</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%);
+            color: #2e7d32;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animación de fondo */
+        .animated-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            animation: float 20s infinite ease-in-out;
+        }
+
+        /* Destellos dorados */
+        .golden-sparkle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: radial-gradient(circle, #ffd700 0%, #ffed4e 30%, rgba(255, 215, 0, 0.6) 60%, transparent 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 15px #ffd700, 0 0 30px #ffd700, 0 0 45px rgba(255, 215, 0, 0.5);
+            animation: sparkle 4s infinite ease-in-out;
+        }
+
+        .sparkle1 {
+            top: 20%;
+            left: 15%;
+            animation-delay: 0s;
+        }
+
+        .sparkle2 {
+            top: 45%;
+            right: 20%;
+            animation-delay: 0.5s;
+        }
+
+        .sparkle3 {
+            bottom: 30%;
+            left: 25%;
+            animation-delay: 1s;
+        }
+
+        .sparkle4 {
+            top: 60%;
+            right: 35%;
+            animation-delay: 1.5s;
+        }
+
+        .sparkle5 {
+            top: 15%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .sparkle6 {
+            bottom: 20%;
+            right: 15%;
+            animation-delay: 2.5s;
+        }
+
+        .sparkle7 {
+            top: 35%;
+            left: 50%;
+            animation-delay: 0.8s;
+        }
+
+        .sparkle8 {
+            bottom: 45%;
+            left: 40%;
+            animation-delay: 1.8s;
+        }
+
+        .sparkle9 {
+            top: 70%;
+            left: 60%;
+            animation-delay: 0.3s;
+        }
+
+        .sparkle10 {
+            top: 25%;
+            right: 45%;
+            animation-delay: 2.2s;
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0) translateY(0) rotate(0deg);
+            }
+            25% {
+                opacity: 0.8;
+                transform: scale(1.2) translateY(-15px) rotate(90deg);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.8) translateY(-30px) rotate(180deg);
+            }
+            75% {
+                opacity: 0.8;
+                transform: scale(1.2) translateY(-15px) rotate(270deg);
+            }
+        }
+
+        .shape1 {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape2 {
+            width: 200px;
+            height: 200px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 5s;
+        }
+
+        .shape3 {
+            width: 250px;
+            height: 250px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 10s;
+        }
+
+        .shape4 {
+            width: 180px;
+            height: 180px;
+            top: 30%;
+            right: 30%;
+            animation-delay: 15s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg);
+                opacity: 0.3;
+            }
+            25% {
+                transform: translate(50px, -50px) rotate(90deg);
+                opacity: 0.5;
+            }
+            50% {
+                transform: translate(-30px, 30px) rotate(180deg);
+                opacity: 0.4;
+            }
+            75% {
+                transform: translate(40px, 40px) rotate(270deg);
+                opacity: 0.6;
+            }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(46, 125, 50, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-out;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4em;
+            font-weight: 700;
+            color: #1b5e20;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeInDown 1s ease-out 0.2s both;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5em;
+            font-weight: 400;
+            color: #558b2f;
+            font-style: italic;
+            animation: fadeInDown 1s ease-out 0.4s both;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-bottom: 50px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(46, 125, 50, 0.2);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Interior Section */
+        .interior-section {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .interior-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            font-weight: 600;
+            color: #1b5e20;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .interior-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(46, 125, 50, 0.2);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .interior-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Menu Section */
+        .menu-section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-size: 3.5em;
+            font-weight: 600;
+            color: #1b5e20;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ffd700, transparent);
+            border-radius: 2px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .menu-item {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(46, 125, 50, 0.15);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: fadeInUp 0.6s ease-out;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(46, 125, 50, 0.4);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .menu-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .menu-item-content {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        .menu-item-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #1b5e20;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .menu-item-description {
+            font-family: 'Lato', sans-serif;
+            font-size: 1em;
+            color: #558b2f;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .menu-item-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5em;
+            font-weight: 600;
+            color: #ffd700;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Bebidas Section */
+        .bebidas-section {
+            margin-bottom: 50px;
+        }
+
+        .bebidas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .bebida-item {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(46, 125, 50, 0.15);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: fadeInUp 0.6s ease-out;
+            cursor: pointer;
+        }
+
+        .bebida-item:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(46, 125, 50, 0.4);
+        }
+
+        .bebida-item img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .bebida-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .bebida-item-content {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        .bebida-item-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #1b5e20;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .bebida-item-description {
+            font-family: 'Lato', sans-serif;
+            font-size: 1em;
+            color: #558b2f;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .bebida-item-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5em;
+            font-weight: 600;
+            color: #ffd700;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contact Buttons */
+        .contact-buttons {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-btn {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            animation: pulse 2s infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .contact-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .contact-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .email-btn {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+        }
+
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            margin-top: 50px;
+            box-shadow: 0 8px 32px rgba(46, 125, 50, 0.1);
+        }
+
+        footer p {
+            font-family: 'Cormorant Garamond', serif;
+            color: #558b2f;
+            font-size: 1.2em;
+        }
+
+        /* Ripple effect */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(0);
+            animation: ripple-animation 0.6s ease-out;
+            pointer-events: none;
+        }
+
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 255, 248, 0.98) 100%);
+            margin: auto;
+            padding: 40px;
+            border-radius: 25px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.4s ease;
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 35px;
+            font-weight: bold;
+            color: #1b5e20;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .close-modal:hover {
+            transform: rotate(90deg) scale(1.2);
+        }
+
+        .modal-image {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: #1b5e20;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .modal-description {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.1em;
+            color: #558b2f;
+            line-height: 1.8;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            font-weight: 600;
+            color: #ffd700;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .section-title {
+                font-size: 2.5em;
+            }
+
+            .interior-section h2 {
+                font-size: 2em;
+            }
+
+            .logo {
+                max-width: 300px;
+            }
+
+            .menu-grid,
+            .bebidas-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .contact-buttons {
+                bottom: 20px;
+                left: 20px;
+                gap: 12px;
+            }
+
+            .contact-btn {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+                border-width: 2px;
+            }
+
+            .modal-content {
+                padding: 30px 20px;
+            }
+
+            .modal-title {
+                font-size: 2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .logo {
+                max-width: 250px;
+            }
+
+            .contact-buttons {
+                bottom: 15px;
+                left: 15px;
+                gap: 10px;
+            }
+
+            .contact-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 20px;
+                border-width: 2px;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-background">
+        <div class="floating-shape shape1"></div>
+        <div class="floating-shape shape2"></div>
+        <div class="floating-shape shape3"></div>
+        <div class="floating-shape shape4"></div>
+        <div class="golden-sparkle sparkle1"></div>
+        <div class="golden-sparkle sparkle2"></div>
+        <div class="golden-sparkle sparkle3"></div>
+        <div class="golden-sparkle sparkle4"></div>
+        <div class="golden-sparkle sparkle5"></div>
+        <div class="golden-sparkle sparkle6"></div>
+        <div class="golden-sparkle sparkle7"></div>
+        <div class="golden-sparkle sparkle8"></div>
+        <div class="golden-sparkle sparkle9"></div>
+        <div class="golden-sparkle sparkle10"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610483/Gemini_Generated_Image_ygeyqwygeyqwygey_hev5oa.png" alt="Logo Gaufre Douceur" class="logo">
+            <h1>Gaufre Douceur</h1>
+            <p class="subtitle">Sabores que endulzan tu día</p>
+        </header>
+
+        <section class="hero">
+            <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762609523/Gemini_Generated_Image_mzwcwwmzwcwwmzwc_wzzhd4.png" alt="Fachada del restaurante">
+        </section>
+
+        <section class="interior-section fade-in">
+            <h2>Nuestro Ambiente</h2>
+            <div class="interior-image">
+                <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762609508/Gemini_Generated_Image_3le7t13le7t13le7_s5zauk.png" alt="Interior del restaurante">
+            </div>
+        </section>
+
+        <section class="menu-section fade-in">
+            <h2 class="section-title">Nuestro Menú</h2>
+            <div class="menu-grid">
+                <div class="menu-item" data-title="Dulce Aurora" data-description="Gaufre belga artesanal con textura dorada y crujiente, servido con miel de flores silvestres y mantequilla derretida. Un clásico que nunca pasa de moda, perfecto para comenzar el día con dulzura." data-price="$8.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610496/Gemini_Generated_Image_jj2f77jj2f77jj2f_cbmuhp.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610496/Gemini_Generated_Image_jj2f77jj2f77jj2f_cbmuhp.png" alt="Dulce Aurora">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">Dulce Aurora</div>
+                        <div class="menu-item-description">Gaufre clásico con miel y mantequilla</div>
+                        <div class="menu-item-price">$8.50</div>
+                    </div>
+                </div>
+                <div class="menu-item" data-title="Jardín de Frutas" data-description="Gaufre cubierto con una selección colorida de frutas frescas de temporada, coronado con crema batida casera y un toque de azúcar glas. Una explosión de frescura y colores naturales en cada bocado." data-price="$10.00" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610502/Gemini_Generated_Image_le8763le8763le87_rujp6n.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610502/Gemini_Generated_Image_le8763le8763le87_rujp6n.png" alt="Jardín de Frutas">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">Jardín de Frutas</div>
+                        <div class="menu-item-description">Frutas frescas con crema batida</div>
+                        <div class="menu-item-price">$10.00</div>
+                    </div>
+                </div>
+                <div class="menu-item" data-title="Noche de Chocolate" data-description="Gaufre bañado en salsa de chocolate belga derretido, decorado con nueces tostadas y trozos de chocolate premium. Una experiencia indulgente para los amantes del cacao más puro y delicioso." data-price="$11.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610543/Gemini_Generated_Image_qxda8mqxda8mqxda_xpjrvi.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610543/Gemini_Generated_Image_qxda8mqxda8mqxda_xpjrvi.png" alt="Noche de Chocolate">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">Noche de Chocolate</div>
+                        <div class="menu-item-description">Chocolate belga con nueces tostadas</div>
+                        <div class="menu-item-price">$11.50</div>
+                    </div>
+                </div>
+                <div class="menu-item" data-title="Caramelo Dorado" data-description="Gaufre artesanal con salsa de caramelo casero, un toque de sal marina y helado de vainilla. La perfecta combinación de dulce y salado que crea una armonía de sabores inolvidable." data-price="$12.00" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610529/Gemini_Generated_Image_9k1h329k1h329k1h_ql7z3p.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610529/Gemini_Generated_Image_9k1h329k1h329k1h_ql7z3p.png" alt="Caramelo Dorado">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">Caramelo Dorado</div>
+                        <div class="menu-item-description">Caramelo casero con helado de vainilla</div>
+                        <div class="menu-item-price">$12.00</div>
+                    </div>
+                </div>
+                <div class="menu-item" data-title="Tropical Paradise" data-description="Gaufre crujiente con crema de avellanas, rodajas de plátano fresco y un toque de canela. Un sabor tropical que transporta tus sentidos a un paraíso de dulzura y texturas perfectas." data-price="$10.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610515/Gemini_Generated_Image_l0fe0rl0fe0rl0fe_v04ydh.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610515/Gemini_Generated_Image_l0fe0rl0fe0rl0fe_v04ydh.png" alt="Tropical Paradise">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">Tropical Paradise</div>
+                        <div class="menu-item-description">Crema de avellanas con plátano</div>
+                        <div class="menu-item-price">$10.50</div>
+                    </div>
+                </div>
+                <div class="menu-item" data-title="Terciopelo Escarlata" data-description="Gaufre de terciopelo rojo con glaseado de queso crema suave y frambuesas frescas. Una creación elegante que combina la suavidad del terciopelo con la frescura de las frutas rojas." data-price="$13.00" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610552/Gemini_Generated_Image_thfskythfskythfs_s0di0s.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610552/Gemini_Generated_Image_thfskythfskythfs_s0di0s.png" alt="Terciopelo Escarlata">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">Terciopelo Escarlata</div>
+                        <div class="menu-item-description">Red velvet con glaseado de queso</div>
+                        <div class="menu-item-price">$13.00</div>
+                    </div>
+                </div>
+                <div class="menu-item" data-title="Brisa Oriental" data-description="Gaufre con polvo de té matcha, cubierto con mango fresco, semillas de sésamo y un toque de miel. Una fusión de sabores orientales que crea una experiencia única y refrescante." data-price="$12.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610563/Gemini_Generated_Image_lnctbqlnctbqlnct_uckjtk.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610563/Gemini_Generated_Image_lnctbqlnctbqlnct_uckjtk.png" alt="Brisa Oriental">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">Brisa Oriental</div>
+                        <div class="menu-item-description">Matcha con mango y sésamo</div>
+                        <div class="menu-item-price">$12.50</div>
+                    </div>
+                </div>
+                <div class="menu-item" data-title="Sueño Italiano" data-description="Gaufre con café espresso, mascarpone cremoso, cacao en polvo y galletas. El clásico tiramisú reinventado en formato belga, una delicia que combina lo mejor de dos mundos." data-price="$13.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610581/Gemini_Generated_Image_azioxjazioxjazio_ff91lt.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610581/Gemini_Generated_Image_azioxjazioxjazio_ff91lt.png" alt="Sueño Italiano">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">Sueño Italiano</div>
+                        <div class="menu-item-description">Tiramisú en formato gaufre</div>
+                        <div class="menu-item-price">$13.50</div>
+                    </div>
+                </div>
+                <div class="menu-item" data-title="Galleta Cremosa" data-description="Gaufre con helado de cookies & cream, trozos de galleta Oreo, crema batida esponjosa y salsa de chocolate. Una indulgencia perfecta para los amantes de las texturas cremosas y crujientes." data-price="$11.00" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610612/Gemini_Generated_Image_v382bkv382bkv382_b1uuuq.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610612/Gemini_Generated_Image_v382bkv382bkv382_b1uuuq.png" alt="Galleta Cremosa">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">Galleta Cremosa</div>
+                        <div class="menu-item-description">Helado y galletas con crema</div>
+                        <div class="menu-item-price">$11.00</div>
+                    </div>
+                </div>
+                <div class="menu-item" data-title="Oro del Chef" data-description="La creación estrella del chef. Gaufre con ingredientes premium seleccionados, presentado con elegancia y un toque especial. Una experiencia gastronómica única que despierta todos los sentidos." data-price="$15.00" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762610707/Gemini_Generated_Image_jj2f77jj2f77jj2f_fzvjot.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762610707/Gemini_Generated_Image_jj2f77jj2f77jj2f_fzvjot.png" alt="Oro del Chef">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">Oro del Chef</div>
+                        <div class="menu-item-description">Creación premium exclusiva</div>
+                        <div class="menu-item-price">$15.00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bebidas-section fade-in">
+            <h2 class="section-title">Bebidas</h2>
+            <div class="bebidas-grid">
+                <div class="bebida-item" data-title="Aroma Dorado" data-description="Café de origen único, tostado artesanalmente y preparado con dedicación. Presenta notas de chocolate y caramelo, con un cuerpo suave y aroma intenso que complementa perfectamente cualquier gaufre de nuestro menú." data-price="$4.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762611806/Gemini_Generated_Image_c0xzifc0xzifc0xz_c95rib.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762611806/Gemini_Generated_Image_c0xzifc0xzifc0xz_c95rib.png" alt="Aroma Dorado">
+                    <div class="bebida-item-content">
+                        <div class="bebida-item-title">Aroma Dorado</div>
+                        <div class="bebida-item-description">Café artesanal con notas de chocolate</div>
+                        <div class="bebida-item-price">$4.50</div>
+                    </div>
+                </div>
+                <div class="bebida-item" data-title="Frescor Natural" data-description="Batido refrescante preparado con frutas frescas de temporada, yogur natural cremoso y un toque de miel. Una bebida rica en vitaminas con un sabor delicioso y natural, disponible en diferentes combinaciones según la temporada." data-price="$5.50" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762611800/Gemini_Generated_Image_mz9xsjmz9xsjmz9x_xozr8e.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762611800/Gemini_Generated_Image_mz9xsjmz9xsjmz9x_xozr8e.png" alt="Frescor Natural">
+                    <div class="bebida-item-content">
+                        <div class="bebida-item-title">Frescor Natural</div>
+                        <div class="bebida-item-description">Batido de frutas con yogur natural</div>
+                        <div class="bebida-item-price">$5.50</div>
+                    </div>
+                </div>
+                <div class="bebida-item" data-title="Serenidad Infusionada" data-description="Selección cuidadosa de tés e infusiones de alta calidad: té verde, té negro, rooibos, manzanilla y más variedades. Cada uno seleccionado para ofrecer una experiencia única de sabor, aroma y bienestar." data-price="$4.00" data-image="https://res.cloudinary.com/di56jqeic/image/upload/v1762611914/Gemini_Generated_Image_a8fjxea8fjxea8fj_h9xr3g.png">
+                    <img src="https://res.cloudinary.com/di56jqeic/image/upload/v1762611914/Gemini_Generated_Image_a8fjxea8fjxea8fj_h9xr3g.png" alt="Serenidad Infusionada">
+                    <div class="bebida-item-content">
+                        <div class="bebida-item-title">Serenidad Infusionada</div>
+                        <div class="bebida-item-description">Tés e infusiones premium</div>
+                        <div class="bebida-item-price">$4.00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="fade-in">
+            <p>© 2024 Gaufre Douceur - Todos los derechos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Visítanos y disfruta de nuestros deliciosos platos</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="itemModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modalImage" class="modal-image" src="" alt="">
+            <h2 id="modalTitle" class="modal-title"></h2>
+            <p id="modalDescription" class="modal-description"></p>
+            <div id="modalPrice" class="modal-price"></div>
+        </div>
+    </div>
+
+    <div class="contact-buttons">
+        <a href="mailto:pedidos@gaufredouceur.com?subject=Pedido%20Gaufre%20Douceur" class="contact-btn email-btn" title="Enviar correo">
+            <span>✉️</span>
+        </a>
+        <a href="https://wa.me/1234567890?text=Hola,%20me%20gustaría%20hacer%20un%20pedido" class="contact-btn whatsapp-btn" target="_blank" title="Contactar por WhatsApp">
+            <span>💬</span>
+        </a>
+    </div>
+
+    <script>
+        // Modal functionality
+        const modal = document.getElementById('itemModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+        const modalPrice = document.getElementById('modalPrice');
+        const closeModal = document.querySelector('.close-modal');
+
+        // Open modal when clicking on menu items
+        document.querySelectorAll('.menu-item, .bebida-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const title = this.getAttribute('data-title');
+                const description = this.getAttribute('data-description');
+                const price = this.getAttribute('data-price');
+                const image = this.getAttribute('data-image');
+
+                modalImage.src = image;
+                modalImage.alt = title;
+                modalTitle.textContent = title;
+                modalDescription.textContent = description;
+                modalPrice.textContent = price;
+
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close modal with ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced parallax effect to hero image
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero img');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.3}px) scale(${1 + scrolled * 0.0001})`;
+            }
+        });
+
+        // Add interactive hover effects with 3D transform
+        document.querySelectorAll('.menu-item, .bebida-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            });
+
+            item.addEventListener('mousemove', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                this.style.transform = `translateY(-15px) scale(1.02) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1) perspective(1000px) rotateX(0) rotateY(0)';
+            });
+        });
+
+        // Dynamic background color shift with smooth transition
+        let colorIndex = 0;
+        const colors = [
+            'linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%)',
+            'linear-gradient(135deg, #f1f8e9 0%, #dcedc8 50%, #c5e1a5 100%)',
+            'linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 50%, #80cbc4 100%)'
+        ];
+
+        setInterval(() => {
+            document.body.style.transition = 'background 3s ease';
+            document.body.style.background = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+        }, 12000);
+
+        // Add ripple effect to contact buttons
+        document.querySelectorAll('.contact-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Add loading animation for images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+                this.style.transition = 'opacity 0.5s ease';
+            });
+            
+            img.style.opacity = '0';
+        });
+
+        // Smooth page load animation
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
